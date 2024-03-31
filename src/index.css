@@ -1,13 +1,244 @@
 body {
   margin: 0;
+  margin-bottom: 100px;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+  margin: 0;
+  padding: 0;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container{
+  padding: 0px 150px;
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.navbar {
+ 
+ 
+ background-color: #F4C542;
+}
+.navbar .logo img {
+  width: 100px;
+  height: 100px;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding-right: 10px;
+  
+}
+li {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.active {
+  color: white;
+  
+}
+
+.container-slider {
+  padding: 0px 150px;
+ 
+display: flex;
+justify-content: center;
+}
+.slider-container {
+  width: 100%;
+}
+.slider {
+  
+  height: 450px; 
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+.slider h1 {
+  font-size: 24px;
+  position: relative;
+}
+.slider-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+}
+.slider-nav button {
+  
+  background-color: #6E36A4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+.slider-nav button:first-child{
+position: absolute;
+left: 150px;
+  
+}
+.slider-nav button:last-child{
+  position: absolute;
+  right: 150px;
+    
+  }
+
+.slider-dots {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #6E36A4;
+}
+h1 {
+ font-size: 45px;
+ color: rgb(203, 35, 245);
+}
+p{
+  font-size: 32px;
+  text-align: center;
+}
+
+
+@keyframes slideAnimation {
+  0% {
+    background-position: 100% 0; /* Initial position: fully to the right */
+  }
+  100% {
+    background-position: 0 0; /* Final position: fully to the left */
+  }
+}
+.container-features{
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  
+}
+section h1 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+section p{
+  line-height: 1.6;
+    color: rgb(94, 93, 93);
+    font-weight: 18px;
+    font-size: 17px;
+}
+section span {
+  font-size: 32px;
+  color: blue;
+}
+.specialheading {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.specialheading h1 {
+  font-size: 60px;
+}
+.specialheading h3{
+  font-size: 40px;
+  
+}
+.moveFromRight {
+  animation: moveFromRightAnimation 1s forwards;
+}
+
+.moveFromLeft {
+  animation: moveFromLeftAnimation 1s forwards;
+}
+
+@keyframes moveFromRightAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromLeftAnimation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.service-content{
+  margin-top: 100px;
+display: flex;
+gap: 40px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.service-content .card {
+  background-color: rgb(196, 193, 193);
+  width: 500px;
+  display: flex;
+  gap: 10px;
+   box-shadow: 9px 8px 17px -4px rgba(0,0,0,0.58);
+  -webkit-box-shadow: 9px 8px 17px -4px rgba(0,0,0,0.58);
+  -moz-box-shadow: 9px 8px 17px -4px rgba(0,0,0,0.58);;
+}
+.service-content .card .img img{
+  width: 200px;
+ height: 250px;
+}
+.service-content .card .content-card {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 5px;
+  align-items: flex-end;
+  font-size: 16px;
+}
+.service-content .card .content-card span{
+  color: blue;
+}
+.service-content .card .content-card h1, p{
+  font-size: 16px;
+  direction: rtl;
+  text-align: right;
 }
